@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Certificate Verification</title>
 
 <style>
@@ -57,13 +56,11 @@ border-radius:12px;
 footer{
 background:#005A9C;
 color:#fff;
-padding:40px 20px 25px;
 margin-top:auto;
+padding:25px 15px;
 }
 
 .footer-top{
-max-width:1000px;
-margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -72,30 +69,57 @@ text-align:center;
 
 .item{
 flex:1;
-padding:8px;
-text-align:center;
 text-decoration:none;
 color:#fff;
+padding:10px;
 display:block;
-min-width:0;
 }
-
-.item:hover{
-color:#fff;
-}
-
-.footer-top{
+.icon{
+width:55px;
+height:55px;
+border:2px solid #fff;
+border-radius:50%;
 display:flex;
-justify-content:space-between;
 align-items:center;
-flex-wrap:nowrap;
-text-align:center;
+justify-content:center;
+font-size:24px;
+margin:0 auto 10px;
+}
+
+.item h3{
+font-size:18px;
+margin-bottom:5px;
+font-weight:bold;
+word-break:break-word;
+}
+
+.item p{
+font-size:13px;
 }
 
 .divider{
 width:1px;
-height:90px;
+height:80px;
+background:rgba(255,255,255,.4);
+}
+
+footer hr{
+border:none;
+height:1px;
 background:rgba(255,255,255,.3);
+margin:20px 0;
+}
+
+.copy{
+text-align:center;
+font-size:13px;
+line-height:1.8;
+}
+
+.copy a{
+color:#fff;
+text-decoration:none;
+margin:0 5px;
 }
 
 @media(max-width:768px){
@@ -104,57 +128,29 @@ background:rgba(255,255,255,.3);
 flex-direction:row;
 }
 
-.divider{
-width:1px;
-height:80px;
-}
-
-.icon{
-width:45px;
-height:45px;
-font-size:20px;
-}
-
-.item h3{
-font-size:12px;
-}
-
-.item p{
-font-size:11px;
-}
-
-.copy{
-font-size:12px;
-}
-
-}
-
-.divider{
-width:80%;
-height:1px;
-margin:15px 0;
-}
-
 .item{
-padding:15px 0;
-}
-
-.item h3{
-font-size:20px;
-}
-
-.item p{
-font-size:16px;
+padding:5px;
 }
 
 .icon{
-width:60px;
+width:42px;
+height:42px;
+font-size:18px;
+}
+.item h3{
+font-size:12px;
+}
+
+.item p{
+font-size:10px;
+}
+
+.divider{
 height:60px;
-font-size:28px;
 }
 
 .copy{
-font-size:14px;
+font-size:11px;
 }
 
 }
@@ -186,25 +182,35 @@ font-size:14px;
 <div class="footer-top">
 
 <a class="item" href="tel:920024555">
+
 <div class="icon">📞</div>
+
 <h3>920024555</h3>
+
 <p>Call Us</p>
+
 </a>
 
 <div class="divider"></div>
 
 <a class="item" href="mailto:info@es.chamber.org.sa">
-<div class="icon">✉️</div>
-<h3>info@es.chamber.org.sa</h3>
-<p>Email Us</p>
-</a>
 
-<div class="divider"></div>
+<div class="icon">✉️</div>
+
+<h3>info@es.chamber.org.sa</h3>
+
+<p>Email Us</p>
+
+</a> <div class="divider"></div>
 
 <a class="item" href="https://es.chamber.org.sa" target="_blank">
+
 <div class="icon">🌐</div>
+
 <h3>es.chamber.org.sa</h3>
+
 <p>Visit Website</p>
+
 </a>
 
 </div>
@@ -212,13 +218,16 @@ font-size:14px;
 <hr>
 
 <div class="copy">
+
 © Copyright Asharqia Chamber
+
 <br><br>
+
 <a href="#">العربية</a> |
 <a href="#">English (US)</a>
-</div>
 
-</footer>
+</div>  </footer>
 
 </body>
+
 </html>
