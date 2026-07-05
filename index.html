@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[7/5, 21:03] ch: <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -14,79 +14,152 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
+
 body{
-    background:#f4f6f9;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+background:#f4f6f9;
+min-height:100vh;
+display:flex;
+flex-direction:column;
 }
 
 header{
-    background:#004B8D;
-    padding:18px;
+background:#004B8D;
+padding:18px;
 }
 
 .logo{
-    height:40px;
-    display:block;
+height:40px;
+display:block;
 }
 
 .container{
-    max-width:800px;
-    margin:auto;
-    padding:50px 20px;
-    flex:1;
+max-width:800px;
+margin:auto;
+padding:50px 20px;
+flex:1;
 }
 
 .card{
-    background:#fff;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    max-width:500px;
-    margin:auto;
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+max-width:500px;
+margin:auto;
 }
 
 .certificate{
-    width:100%;
-    display:block;
-    border-radius:12px;
+width:100%;
+display:block;
+border-radius:12px;
 }
 
 footer{
-    margin-top:auto;
-    background:#005A9C;
-    color:#fff;
-    padding:20px;
-    text-align:center;
+background:#005A9C;
+color:#fff;
+padding:40px 20px 25px;
+margin-top:auto;
 }
 
-.buttons{
+.footer-top{
+max-width:1000px;
+margin:auto;
 display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
-margin-bottom:25px;
+justify-content:space-between;
+align-items:center;
+text-align:center;
 }
 
-.btn{
-display:inline-block;
-padding:03px 03px;
-border:1px solid #fff;
-border-radius:03px;
+.item{
+flex:1;
+padding:20px;
+}
+
+.icon{
+width:70px;
+height:70px;
+border:2px solid #fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+margin:0 auto 15px;
+}
+
+.item h3{
+font-size:24px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.item p{
+font-size:18px;
+}
+
+.divider{
+width:1px;
+height:120px;
+background:rgba(255,255,255,.4);
+}
+
+footer hr{
+border:none;
+height:1px;
+background:rgba(255,255,255,.3);
+margin:30px auto;
+max-width:90%;
+}
+[7/5, 21:04] ch: .copy{
+text-align:center;
+font-size:15px;
+line-height:1.8;
+}
+
+.copy a{
 color:#fff;
 text-decoration:none;
-font-weight:bold;
+margin:0 8px;
 }
 
-.btn:hover{
-background:#fff;
-color:#005A9C;
+.copy a:hover{
+text-decoration:underline;
+}
+
+@media(max-width:768px){
+
+.footer-top{
+flex-direction:column;
+}
+
+.divider{
+width:80%;
+height:1px;
+margin:15px 0;
+}
+
+.item{
+padding:15px 0;
+}
+
+.item h3{
+font-size:20px;
+}
+
+.item p{
+font-size:16px;
+}
+
+.icon{
+width:60px;
+height:60px;
+font-size:28px;
 }
 
 .copy{
-margin-top:05px;
-font-size:05px;
+font-size:14px;
+}
+
 }
 
 </style>
@@ -113,23 +186,41 @@ font-size:05px;
 
 <footer>
 
-<div class="buttons">
+<div class="footer-top">
 
-<a class="btn" href="tel:920024555">📞 Call</a>
+<div class="item">
+<div class="icon">📞</div>
+<h3>920024555</h3>
+<p>Call Us</p>
+</div>
 
-<a class="btn" href="mailto:info@es.chamber.org.sa">📧 Email</a>
+<div class="divider"></div>
 
-<a class="btn" href="https://es.chamber.org.sa">🌐 Website</a>
+<div class="item">
+<div class="icon">✉️</div>
+<h3>info@es.chamber.org.sa</h3>
+<p>Email Us</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="item">
+<div class="icon">🌐</div>
+<h3>es.chamber.org.sa</h3>
+<p>Visit Website</p>
+</div>
 
 </div>
 
-<div class="copy">
+<hr>
+[7/5, 21:05] ch: <div class="copy">
 
 © Copyright Asharqia Chamber
 
 <br><br>
 
-العربية  | ; English (US)
+<a href="#">العربية</a> |
+<a href="#">English (US)</a>
 
 </div>
 
