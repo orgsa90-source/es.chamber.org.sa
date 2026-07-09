@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Certificate Verification</title>
 
 <style>
@@ -35,13 +34,14 @@ display:flex;
 justify-content:center;
 align-items:center;
 z-index:99999;
-transition:opacity .8s;
+transition:opacity .5s;
 }
 
 .glow{
-width:170px;
-height:170px;
+width:70px;
+height:70px;
 border-radius:50%;
+background:#fff;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -49,27 +49,23 @@ animation:pulse 2s infinite;
 }
 
 .glow img{
-width:95px;
+width:82px;
 height:auto;
 }
 
 @keyframes pulse{
-
 0%{
-box-shadow:0 0 15px rgba(0,91,156,.3);
+box-shadow:0 0 12px rgba(0,91,156,.20);
 transform:scale(1);
 }
-
 50%{
-box-shadow:0 0 70px rgba(0,91,156,1);
-transform:scale(1.08);
+box-shadow:0 0 35px rgba(0,91,156,.45);
+transform:scale(1.03);
 }
-
 100%{
-box-shadow:0 0 15px rgba(0,91,156,.3);
+box-shadow:0 0 12px rgba(0,91,156,.20);
 transform:scale(1);
 }
-
 }
 
 header{
@@ -103,6 +99,48 @@ width:100%;
 display:block;
 border-radius:12px;
 }
+</body>
+</html>
+<script>
+
+// Splash Screen
+window.addEventListener("load", function(){
+
+setTimeout(function(){
+
+document.getElementById("splash").style.opacity="0";
+
+setTimeout(function(){
+
+document.getElementById("splash").style.display="none";
+
+},800);
+
+},2500);
+
+});
+
+// Certificate Change
+
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id");
+
+const certificate = document.getElementById("certificate");
+
+if(id=="2"){
+certificate.src="certificate1.jpg";
+}else if(id=="3"){
+certificate.src="certificate2.jpg";
+}else if(id=="4"){
+certificate.src="certificate3.jpg";
+}else if(id=="5"){
+certificate.src="certificate4.jpg";
+}else{
+certificate.src="1633265936658.jpg";
+}
+
+</script>
 footer{
 margin-top:auto;
 background:#005A9C;
@@ -151,40 +189,31 @@ font-size:5px;
 
 <div id="splash">
 <div class="glow">
-<img src="0003.png.png" alt="Logo">
+<img src="logo-blue.png.png" alt="Logo">
 </div>
 </div>
 
 <header>
-
 <img src="0003.png.png" class="logo">
-
 </header>
 
 <div class="container">
-
 <div class="card">
 
-<img src="1633265936658.jpg" class="certificate">
+<img id="certificate" src="1633265936658.jpg" class="certificate">
 
 </div>
-
 </div>
+
 <footer>
 
 <div class="buttons">
 
-<a class="btn" href="tel:920024555">
-📞920024555 Call
-</a>
+<a class="btn" href="tel:920024555">📞920024555 Call</a>
 
-<a class="btn" href="mailto:info@es.chamber.org.sa">
-📧 Email
-</a>
+<a class="btn" href="mailto:info@es.chamber.org.sa">📧 Email</a>
 
-<a class="btn" href="https://es.chamber.org.sa">
-🌐 Website
-</a>
+<a class="btn" href="https://es.chamber.org.sa">🌐 Website</a>
 
 </div>
 
@@ -199,26 +228,3 @@ font-size:5px;
 </div>
 
 </footer>
-
-<script>
-
-window.addEventListener("load", function(){
-
-setTimeout(function(){
-
-document.getElementById("splash").style.opacity="0";
-
-setTimeout(function(){
-
-document.getElementById("splash").style.display="none";
-
-},800);
-
-},2500);
-
-});
-
-</script>
-</body>
-
-</html>
