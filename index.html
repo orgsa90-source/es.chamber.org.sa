@@ -1,4 +1,4 @@
-[7/10, 23:26] ch: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -142,7 +142,7 @@ color:#666;
 .green{
 color:#198754;
 }
-[7/10, 23:27] ch: .qr-section{
+.qr-section{
 margin-top:25px;
 text-align:center;
 }
@@ -293,16 +293,6 @@ Verified
 </div>
 
 <div class="item">
-<span>Holder Name</span>
-<strong>Rajab Ali</strong>
-</div>
-
-<div class="item">
-<span>Issue Date</span>
-<strong>10 July 2026</strong>
-</div>
-
-<div class="item">
 <span>Status</span>
 <strong class="green">Verified</strong>
 </div>
@@ -338,7 +328,7 @@ Scan this QR code to verify this certificate.
 </div>
 
 </main>
-[7/10, 23:27] ch: <footer>
+<footer>
 <div class="footer-content">
 <p>© 2026 Asharqia Chamber</p>
 <p>العربية | English</p>
@@ -380,9 +370,7 @@ function copyCertificate(){
 const details = `Certificate Verification
 
 Certificate No: 000145879
-Name: Rajab Ali
-Status: VERIFIED
-Issue Date: 10 July 2026`;
+`;
 
 navigator.clipboard.writeText(details);
 alert("Certificate details copied.");
