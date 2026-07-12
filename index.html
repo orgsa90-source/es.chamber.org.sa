@@ -60,13 +60,19 @@ z-index:9999;
     width:170px;
     height:170px;
     border-radius:50%;
-    background:radial-gradient(circle,
-        rgba(2,105,210,.1) 0%,
-        rgba(6,98,155,.95) 95%,
-        rgba(6,120,121,.80) 80%,
-        rgba(6,136,113,.45) 45%,
-        rgba(6,136,113,0) 100%);
-    filter: blur(4px) brightness(1.35);
+    background: radial-gradient(circle at 70% 30%,
+    #ffffff 0%,
+    #eefcff 12%,
+    #d8f6ff 25%,
+    #c2ecff 40%,
+    #a9d9ff 55%,
+    #8cc1ff 70%,
+    #73a8f5 85%,
+    #5b8fe8 100%
+);
+
+filter: blur(5px) brightness(1.15) saturate(1.15);
+    
     animation:sunGlow .8s ease-out infinite;
 }
 
