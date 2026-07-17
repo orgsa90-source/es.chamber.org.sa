@@ -1,73 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Certificate Verification</title>
+
 <style>
-body{
+
+*{
 margin:0;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:#2d2d2d;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.circle{
-width:230px;
-height:230px;
+body{
+background:#f4f6f9;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+/* Splash Logo */
+
+.glow{
+width:170px;
+height:170px;
+margin:auto;
 border-radius:50%;
-position:relative;
+background:linear-gradient(135deg,#7ea8ff,#eefdf7);
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,#5b73d8,#19b48d);
+position:relative;
 overflow:hidden;
-animation:float 3s ease-in-out infinite;
+animation:pulse 2.8s ease-in-out infinite;
+box-shadow:0 0 25px rgba(0,91,156,.35);
 }
 
-.circle::before{
+.glow img{
+width:85px;
+z-index:2;
+}
+
+.glow::before{
 content:"";
 position:absolute;
-width:320px;
-height:320px;
-background:conic-gradient(
-transparent 0deg,
-rgba(255,255,255,.7) 40deg,
-transparent 80deg);
-animation:shine 2.5s linear infinite;
+top:-40%;
+left:-120%;
+width:60%;
+height:220%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.95),
+transparent
+);
+transform:rotate(25deg);
+animation:shine 2.2s linear infinite;
 }
 
-.logo{
-position:relative;
-z-index:2;
-width:95px;
-height:95px;
+.glow::after{
+content:"";
+position:absolute;
+right:18px;
+bottom:18px;
+width:90px;
+height:90px;
 border-radius:50%;
-background:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-font:bold 18px Arial;
-color:#008f73;
+background:rgba(255,255,255,.28);
+}
+
+@keyframes pulse{
+0%,100%{
+transform:scale(1);
+box-shadow:0 0 18px rgba(0,91,156,.35);
+}
+50%{
+transform:scale(1.06);
+box-shadow:0 0 45px rgba(0,91,156,.8);
+}
 }
 
 @keyframes shine{
-100%{transform:rotate(360deg);}
+0%{
+left:-120%;
+}
+100%{
+left:150%;
+}
 }
 
-@keyframes float{
-50%{transform:translateY(-8px);}
-}
-</style>
-</head>
-<body>
-
-<div class="circle">
-<div class="logo">LOGO</div>
-</div>
-
-</body>
-</html>
-}
 }
 
 header{
@@ -149,13 +173,13 @@ font-size:5px;
 
 <div id="splash">
 <div class="glow">
-<img src="logo-blue.png" alt="Logo">
+<img src="logo-blue.png.png" alt="Logo">
 </div>
 </div>
 
 <header>
 
-<img src="0003.png" class="logo">
+<img src="0003.png.png" class="logo">
 
 </header>
 
@@ -210,9 +234,9 @@ setTimeout(function(){
 
 document.getElementById("splash").style.display="none";
 
-},0);
+},100);
 
-},5000);
+},7000);
 
 });
 
