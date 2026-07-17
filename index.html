@@ -39,35 +39,45 @@ transition:opacity .8s;
 }
 
 .glow{
-width:80px;
-height:80px;
-border-radius:60%;
+width:140px;
+height:140px;
 display:flex;
 justify-content:center;
 align-items:center;
-animation:pulse 5s infinite;
+position:relative;
+animation:pulse 2.5s ease-in-out infinite;
+}
+
+.glow::before{
+content:"";
+position:absolute;
+width:260px;
+height:260px;
+border-radius:50%;
+background:radial-gradient(circle,
+rgba(60,120,255,.35) 0%,
+rgba(60,120,255,.18) 35%,
+rgba(60,120,255,.08) 60%,
+transparent 80%);
+filter:blur(18px);
+z-index:0;
 }
 
 .glow img{
-width:50px;
+width:85px;
 height:auto;
+position:relative;
+z-index:2;
 }
 
 @keyframes pulse{
-
-0%{
-box-shadow:0 0 15px rgba(0,91,156,.3);
+0%,100%{
 transform:scale(1);
 }
 
 50%{
-box-shadow:0 0 70px rgba(0,91,156,1);
 transform:scale(1.08);
 }
-
-100%{
-box-shadow:0 0 15px rgba(0,91,156,.3);
-transform:scale(1);
 }
 
 }
