@@ -39,45 +39,35 @@ transition:opacity .8s;
 }
 
 .glow{
-width:240px;
-height:240px;
+width:80px;
+height:80px;
+border-radius:60%;
 display:flex;
 justify-content:center;
 align-items:center;
-position:relative;
-animation:pulse 6.5s ease-in-out infinite;
-}
-
-.glow::before{
-content:"";
-position:absolute;
-width:60px;
-height:60px;
-border-radius:80%;
-background:radial-gradient(circle,
-rgba(60,120,255,.85) 50%,
-rgba(60,120,255,.88) 85%,
-rgba(60,120,255,.88) 90%,
-transparent 100%);
-filter:blur(88px);
-z-index:0;
+animation:pulse 5s infinite;
 }
 
 .glow img{
-width:185px;
+width:50px;
 height:auto;
-position:relative;
-z-index:2;
 }
 
 @keyframes pulse{
-0%,100%{
+
+0%{
+box-shadow:0 0 15px rgba(0,91,156,.3);
 transform:scale(1);
 }
 
-150%{
-transform:scale(2.08);
+50%{
+box-shadow:0 0 70px rgba(0,91,156,1);
+transform:scale(1.08);
 }
+
+100%{
+box-shadow:0 0 15px rgba(0,91,156,.3);
+transform:scale(1);
 }
 
 }
